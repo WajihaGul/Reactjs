@@ -27,7 +27,7 @@ const toggleMode = ()=>{
   return (
 <>
 <Navbar title="My Website" about="About Us" home="HomePage"   />
-<About/>
+
 </>
   );
 }
