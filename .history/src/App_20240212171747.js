@@ -1,3 +1,4 @@
+export default App;
 import './App.css';
 import Navbar from './Components/Navbar';
 import Alert from './Components/Alert';
@@ -13,20 +14,12 @@ const showAlert=(message,type)=>{
     msg:message,
     type:type
   });
-  setTimeout(()=>{
-    setAlert(null)
-  },3000);
-}
-  
-
 return (
 <>
 <Navbar title="My Website" about="About Us" home="HomePage"   />
 <Alert alert={alert}/>
-<TextArea  showAlert={showAlert}/>
+<TextArea/>
 
 </>
   );
 }
-
-export default App;

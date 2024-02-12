@@ -12,12 +12,11 @@ const showAlert=(message,type)=>{
   setAlert({
     msg:message,
     type:type
-  });
-  setTimeout(()=>{
-    setAlert(null)
+  })
+  const setTimeout(()=>{
+    setAlert(null);
   },3000);
-}
-  
+};
 
 return (
 <>

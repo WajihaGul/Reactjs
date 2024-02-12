@@ -10,31 +10,27 @@ export default function TextArea(props) {
     const textUpper=()=>{
         let newText=text.toUpperCase();
         setText(newText);
-        props.showAlert("Text converted to UpperCase","success")
+        props.showAlert("Text converted to UpperCase","Success")
     }
 
     const textLower=()=>{
         let newText=text.toLowerCase();
         setText(newText);
-        props.showAlert("Text converted to LowerCase","success")
     }
 
     const textClear=()=>{
         let newText=' ';
         setText(newText);
-        props.showAlert("Cleared the Text Area","success");
     }
 
     const prefixText=()=>{
         let newText='New Text ' +text;
         setText(newText);
-        props.showAlert(`Added Prefix to the Text`,"success")
     }
 
     const suffixText=()=>{
         let newText= text + ' New Text ';
         setText(newText);
-        props.showAlert('Appended Suffix to the Text','success')
     }
 
     const [text,setText]=useState(' ');

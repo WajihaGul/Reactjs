@@ -22,7 +22,7 @@ export default function TextArea(props) {
     const textClear=()=>{
         let newText=' ';
         setText(newText);
-        props.showAlert("Cleared the Text Area","success");
+        props.showAlert("Cleared the Text Area","info");
     }
 
     const prefixText=()=>{

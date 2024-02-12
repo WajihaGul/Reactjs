@@ -12,21 +12,13 @@ const showAlert=(message,type)=>{
   setAlert({
     msg:message,
     type:type
-  });
-  setTimeout(()=>{
-    setAlert(null)
-  },3000);
-}
-  
-
+  })
 return (
 <>
 <Navbar title="My Website" about="About Us" home="HomePage"   />
 <Alert alert={alert}/>
-<TextArea  showAlert={showAlert}/>
+<TextArea/>
 
 </>
   );
 }
-
-export default App;

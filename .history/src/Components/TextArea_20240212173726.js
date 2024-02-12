@@ -22,19 +22,19 @@ export default function TextArea(props) {
     const textClear=()=>{
         let newText=' ';
         setText(newText);
-        props.showAlert("Cleared the Text Area","success");
+        props.showAlert("Cleared the Text Area","info");
     }
 
     const prefixText=()=>{
         let newText='New Text ' +text;
         setText(newText);
-        props.showAlert(`Added Prefix to the Text`,"success")
+        props.showAlert(`Added Prefix to the Text`,"primary")
     }
 
     const suffixText=()=>{
         let newText= text + ' New Text ';
         setText(newText);
-        props.showAlert('Appended Suffix to the Text','success')
+        props.showAlert('Appended Suffix to the Text','warning')
     }
 
     const [text,setText]=useState(' ');

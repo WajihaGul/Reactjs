@@ -1,30 +1,16 @@
+import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar';
+import About from './Components/About';
 import Alert from './Components/Alert';
 import TextArea from  './Components/TextArea';
-import { useState } from 'react';
-
 
 function App() {
-const  [alert, setAlert] = useState(null);
-
-const showAlert=(message,type)=>{
-  setAlert({
-    msg:message,
-    type:type
-  });
-  setTimeout(()=>{
-    setAlert(null)
-  },3000);
-}
-  
-
-return (
+  return (
 <>
 <Navbar title="My Website" about="About Us" home="HomePage"   />
+<Textarea mode={mode}  onChange={handleChange} value={value}/>
 <Alert alert={alert}/>
-<TextArea  showAlert={showAlert}/>
-
 </>
   );
 }

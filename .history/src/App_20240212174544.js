@@ -13,11 +13,10 @@ const showAlert=(message,type)=>{
     msg:message,
     type:type
   });
-  setTimeout(()=>{
-    setAlert(null)
+  const setTimeout(()=>{
+    setAlert(null);
   },3000);
-}
-  
+};
 
 return (
 <>
