@@ -26,9 +26,9 @@ const showAlert=(message,type)=>{
 
 return (
   <Router>
+    <div className="container my-3">
       <Navbar title="My Website" about="About Us" home="HomePage" />
       <Alert alert={alert} />
-      <div className="container my-3">
       <Routes>
         <Route path="/" element={<TextArea showAlert={showAlert} />} />
         <Route path="/about" element={<About />} />

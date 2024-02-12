@@ -6,7 +6,7 @@ import About from './Components/About';
 import React, { useState } from 'react';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
 } from "react-router-dom";
 
@@ -25,17 +25,21 @@ const showAlert=(message,type)=>{
   
 
 return (
-  <Router>
-      <Navbar title="My Website" about="About Us" home="HomePage" />
-      <Alert alert={alert} />
-      <div className="container my-3">
-      <Routes>
-        <Route path="/" element={<TextArea showAlert={showAlert} />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
-  </Router>
-);
+<>
+<Router>
+<Navbar title="My Website" about="About Us" home="HomePage"   />
+<Alert alert={alert}/>
+        <Switch>
+          <Route exact path="/about">
+            <About />
+          </Route>
+          <Route exact path="/">
+          <TextArea  showAlert={showAlert}/>
+          </Route>
+        </Switch>
+</Router>
+</>
+  );
 }
 
 export default App;

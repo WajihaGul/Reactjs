@@ -3,11 +3,12 @@ import Navbar from './Components/Navbar';
 import Alert from './Components/Alert';
 import TextArea from  './Components/TextArea';
 import About from './Components/About';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import {
   BrowserRouter as Router,
-  Routes,
+  Switch,
   Route,
+  Link
 } from "react-router-dom";
 
 function App() {
@@ -25,17 +26,13 @@ const showAlert=(message,type)=>{
   
 
 return (
-  <Router>
-      <Navbar title="My Website" about="About Us" home="HomePage" />
-      <Alert alert={alert} />
-      <div className="container my-3">
-      <Routes>
-        <Route path="/" element={<TextArea showAlert={showAlert} />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
-  </Router>
-);
+<>
+<Navbar title="My Website" about="About Us" home="HomePage"   />
+<Alert alert={alert}/>
+<TextArea  showAlert={showAlert}/>
+<About/>
+</>
+  );
 }
 
 export default App;
